@@ -10,40 +10,9 @@ package org.coffee.machine.model;
 import org.coffee.machine.abstractModel.Order;
 
 public class InOrder extends Order{
-	public char drink;
-	public int nbSugar;
-	public int nbStick;
-			
-	public InOrder() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	public InOrder(char drink, int nbSugar, int nbStick) {
-		super();
-		this.drink = drink;
-		this.nbSugar = nbSugar;
-		this.nbStick = nbStick;
+		super(drink, nbSugar, nbStick);
 	}
-	
-	public char getDrink() {
-		return drink;
-	}
-	public void setDrink(char drink) {
-		this.drink = drink;
-	}
-	public int getNbSugar() {
-		return nbSugar;
-	}
-	public void setNbSugar(int nbSugar) {
-		this.nbSugar = nbSugar;
-	}
-	public int getNbStick() {
-		return nbStick;
-	}
-	public void setNbStick(int nbStick) {
-		this.nbStick = nbStick;
-	}
-	
 	
 }

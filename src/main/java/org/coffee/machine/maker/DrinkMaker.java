@@ -61,28 +61,28 @@ public class DrinkMaker implements ICoffeMachine{
 			}
 		} else {
 			if(this.isEnoughOrMoreMoney(this.getPrice())) {
-				if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("O")) {
+				if(this.inOrder.getDrinkUpdate().equalsIgnoreCase("O")) {
 					System.out.println("Juice is maid");
 					Drink juice = new Juice("Juice");
 					report.add(juice);
 					return juice;
 				}
 				
-				if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("Hh")) {
+				if(this.inOrder.getDrinkUpdate().equalsIgnoreCase("Hh")) {
 					System.out.println("Hot Chocolate is maid");
 					Drink chocolate = new HotChocolate("Chocolate");
 					report.add(chocolate);
 					return chocolate;
 				}
 				
-				if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("Th")) {
+				if( this.inOrder.getDrinkUpdate().equalsIgnoreCase("Th")) {
 					System.out.println("Hot Tea is maid");
 					Drink tea = new HotTea("Tea");
 					report.add(tea);
 					return tea;
 				}
 				
-				if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("Ch")) {
+				if(this.inOrder.getDrinkUpdate().equalsIgnoreCase("Ch")) {
 					System.out.println("Hot Coffee is maid");
 					Drink coffee = new HotCoffee("Coffeee");
 					report.add(coffee);
@@ -97,20 +97,20 @@ public class DrinkMaker implements ICoffeMachine{
 
 	private boolean isEnoughOrMoreMoney(double price) {
 		if(inOrder instanceof InOrder) {
-			if(((InOrder) this.inOrder).getDrink() == 'T' && price < 0.4)
+			if(this.inOrder.getDrink() == 'T' && price < 0.4)
 				return false;
-			if(((InOrder) this.inOrder).getDrink() == 'H' && price < 0.5)
+			if( this.inOrder.getDrink() == 'H' && price < 0.5)
 				return false;
-			if(((InOrder) this.inOrder).getDrink() == 'C' && price < 0.6)
+			if( this.inOrder.getDrink() == 'C' && price < 0.6)
 				return false;
 		} else {
-			if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("O") && price < 0.6)
+			if( this.inOrder.getDrinkUpdate().equalsIgnoreCase("O") && price < 0.6)
 				return false;
-			if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("Ch") && price < 0.6) 
+			if(this.inOrder.getDrinkUpdate().equalsIgnoreCase("Ch") && price < 0.6) 
 				return false;
-			if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("Th") && price < 0.4)
+			if(this.inOrder.getDrinkUpdate().equalsIgnoreCase("Th") && price < 0.4)
 				return false;
-			if(((InOrderUpdate) this.inOrder).getDrink().equalsIgnoreCase("Hh") && price < 0.5)
+			if(this.inOrder.getDrinkUpdate().equalsIgnoreCase("Hh") && price < 0.5)
 				return false;
 		}	
 		
@@ -128,13 +128,13 @@ public class DrinkMaker implements ICoffeMachine{
 			if(((InOrder) this.inOrder).getDrink() == 'C')
 				least = 0.6 - this.getPrice();
 		} else {
-			if(((InOrderUpdate) this.inOrder).getDrink().equals("O"))
+			if(this.inOrder.getDrinkUpdate().equals("O"))
 				least = 0.6 - this.getPrice();
-			if(((InOrderUpdate) this.inOrder).getDrink().equals("Hh"))
+			if(this.inOrder.getDrinkUpdate().equals("Hh"))
 				least = 0.5 - this.getPrice();
-			if(((InOrderUpdate) this.inOrder).getDrink().equals("Ch"))
+			if(this.inOrder.getDrinkUpdate().equals("Ch"))
 				least = 0.6 - this.getPrice();
-			if(((InOrderUpdate) this.inOrder).getDrink().equals("Th"))
+			if(this.inOrder.getDrinkUpdate().equals("Th"))
 				least = 0.5 - this.getPrice();
 				
 		}

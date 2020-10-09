@@ -14,43 +14,8 @@ import org.coffee.machine.abstractModel.Order;
  */
 public class InOrderUpdate extends Order{
 	
-	private String drink;
-	private int nbSuger;
-	private int nbStick;
-	
 	public InOrderUpdate(String drink, int nbSuger, int nbStick) {
-		super();
-		this.drink = drink;
-		this.nbSuger = nbSuger;
-		this.nbStick = nbStick;
+		super(drink, nbSuger, nbStick);
 	}
 
-	public InOrderUpdate() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public String getDrink() {
-		return drink;
-	}
-
-	public void setDrink(String drink) {
-		this.drink = drink;
-	}
-
-	public int getNbSuger() {
-		return nbSuger;
-	}
-
-	public void setNbSuger(int nbSuger) {
-		this.nbSuger = nbSuger;
-	}
-
-	public int getNbStick() {
-		return nbStick;
-	}
-
-	public void setNbStick(int nbStick) {
-		this.nbStick = nbStick;
-	}
 }
