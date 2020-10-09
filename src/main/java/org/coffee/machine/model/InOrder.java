@@ -14,5 +14,9 @@ public class InOrder extends Order{
 	public InOrder(char drink, int nbSugar, int nbStick) {
 		super(drink, nbSugar, nbStick);
 	}
-	
+
+	@Override
+	public String toString() {
+		return getDrink() + ":" + getNbSugar() + ":" + getNbStick();
+	}	
 }

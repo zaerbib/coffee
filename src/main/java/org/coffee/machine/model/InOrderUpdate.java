@@ -18,4 +18,8 @@ public class InOrderUpdate extends Order{
 		super(drink, nbSuger, nbStick);
 	}
 
+	@Override
+	public String toString() {
+		return getDrinkUpdate()+":" + getNbSugar() + ":"+ getNbStick();
+	}
 }

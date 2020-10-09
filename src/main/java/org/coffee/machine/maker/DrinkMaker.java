@@ -12,7 +12,6 @@ import org.coffee.machine.model.HotChocolate;
 import org.coffee.machine.model.HotCoffee;
 import org.coffee.machine.model.HotTea;
 import org.coffee.machine.model.InOrder;
-import org.coffee.machine.model.InOrderUpdate;
 import org.coffee.machine.model.Juice;
 import org.coffee.machine.model.Tea;
 
